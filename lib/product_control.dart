@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ProductControl extends StatelessWidget{
+class ProductControl extends StatelessWidget {
   final Function addProduct;
+
   ProductControl(this.addProduct);
 
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return RaisedButton(
-          onPressed: () {
-            addProduct('Sweets');
-          },
-          child: Text('Add Products'),
-        );
-  }
-
+    Widget build(BuildContext context) {
+      return RaisedButton(
+            color: Theme.of(context).primaryColor,
+            onPressed: () {
+              addProduct('Sweets');
+            },
+            child: Text('Add Product'),
+          );
+    }
 }
